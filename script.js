@@ -13,7 +13,7 @@ function loadTodo(){
     renderTodo()
 }
 
-// Save tasks to localStorage
+
 function saveTodo(){
     localStorage.setItem("todo", JSON.stringify(todo))
 }
@@ -26,7 +26,7 @@ function addTodo(){
         return
     }
 
-    // store as an object instead of plain text, so we can track completed status
+
     todo.push({ text: task, completed: false })
 
     inputBox.value = ""
@@ -38,7 +38,7 @@ function addTodo(){
 function createTodo(item, index){
     const li = document.createElement("li")
 
-    // checkbox to mark task as completed
+
     const checkbox = document.createElement("input")
     checkbox.type = "checkbox"
     checkbox.checked = item.completed
